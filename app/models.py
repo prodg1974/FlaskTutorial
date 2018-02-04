@@ -10,7 +10,7 @@ class User(db.Model):
 
 
     def __repr__(self):
-        return '<User ()>'.format(self.username)
+        return '<User {}>'.format(self.username)
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -19,4 +19,4 @@ class Post(db.Model):
     user_id = db.Column(db.Integer,db.ForeignKey('user.id'))
 
     def __repr__(self):
-        return '<Post ()>'.format(self.body)
+        return '<Post {}>'.format(self.body)
